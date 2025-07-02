@@ -47,7 +47,12 @@ export const auth = betterAuth({
   // User Configuration
   user: {
     additionalFields: {
-      // Add any additional fields here that is needed!!!
+      role: {
+        type: "string",
+        required: false,
+        defaultValue: "USER",
+        input: false, // This is to hide the role from the user
+      }
     },
   },
 });
